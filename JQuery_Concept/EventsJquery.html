@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="stylesheet" href="../CSS_Folder/events.css" />
+  </head>
+  <body>
+    <h2>Events in Jquery</h2>
+    <p>
+      Events in jquery mean as we know onclick onmouseover onmouseout onload in
+      javascript there is some alternate methods are there for jquery
+    </p>
+
+    <div class="divisions" id="div1">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora modi
+        obcaecati deleniti laborum, architecto minus in qui neque veniam dolorum
+        reprehenderit. Minus ullam voluptate rerum possimus! Dicta laboriosam
+        inventore soluta.
+      </p>
+    </div>
+
+    <div class="divisions" id="div2">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+        doloribus.
+      </p>
+    </div>
+    <br />
+
+    <div id="div3" class="divisions">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
+        consequatur culpa perferendis molestias ducimus modi non nisi cum
+        maiores nihil illum laboriosam, magnam dignissimos sit doloribus ullam
+        explicabo rem. Fugiat facere sint omnis quidem! Optio magnam natus
+        numquam aperiam rerum.
+      </p>
+    </div>
+    <button id="btn1">Click me</button>
+    <button id="btn2">Click to see first div is fade in</button>
+    <button id="btn3">mouse over me</button>
+    <button id="btn">Hover Me</button>
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+    <script>
+      // put every events inside the ready method
+      $(document).ready(function () {
+        // here we mention the click event or mouse over event so many stuffs
+      });
+
+      // there is ready method is there which is used for developer
+
+      // all the html document elements loading complete untill then no other event should be used by user
+      // like onclick event mouse over event
+      // for this purpose we can use ready method to wait the events to complete the html elements loading
+
+      //this is double click event
+      $("#btn2").dblclick(fn2);
+      function fn2() {
+        $("#div1").fadeToggle(1000);
+      }
+
+      // this is like onclick event in javascript
+      $("#btn1").click(fn1);
+      function fn1() {
+        $("#div2").fadeToggle(200);
+      }
+
+      //mouse over event in jquery
+      $("#btn3").mouseenter(fn3);
+      function fn3() {
+        $("#div3").fadeOut(1000);
+      }
+
+      //mouse left event in jquery
+      $("#btn3").mouseleave(fn4);
+      function fn4() {
+        $("#div3").fadeIn(1000);
+      }
+
+      //HOVER EVENT IN JQUERY
+      $("#btn").mouseenter(fn5);
+      $("#btn").mouseleave(fn6);
+      $("#btn").hover(fn5, fn6);
+      function fn5() {
+        $("#div3").fadeOut(1000);
+      }
+      function fn6() {
+        $("#div3").fadeIn(1000);
+      }
+    </script>
+  </body>
+</html>

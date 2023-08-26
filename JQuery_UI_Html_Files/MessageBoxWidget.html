@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MessageBox</title>
+    <link rel="stylesheet" href="../CSS_Folder/messagebox.css" />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.css"
+    >
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.structure.css"
+    >
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.theme.css"
+    >
+  </head>
+  <body>
+    <div id="div1" class="division">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti animi
+        culpa error ea, esse expedita aliquid quas eum optio doloremque
+        perferendis a numquam iste id enim soluta dolores? Modi!
+      </p>
+      <br>
+      <button id="btn1">Click to see the message box</button>
+    </div>
+    <br><br><br>
+
+    <div id="div2" class="division" title="DialogBox">
+      <h2>Hey this is kaviya</h2>
+      <img
+        src="../images/green.jpeg"
+        alt="not available"
+        width="150px"
+        height="100px"
+      ><b><br>
+    </div>
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+
+    <script src="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.js"></script>
+
+    <script>
+      $("#btn1").click(function () {
+        // $('#div2').dialog();
+        $("#div2").dialog({
+          title: "Custome Image",
+          draggable: true,
+          resizeable: true,
+          height: 300,
+          width: 300,
+          modal: true,
+
+          buttons: [
+            {
+              text: "OK",
+              icon: "ui-icon-check",
+              click: function () {
+                $(this).dialog("close");
+              },
+            },
+            {
+              text: "close",
+              icon: "ui-icon-closethick",
+              click: function () {
+                $(this).dialog("close");
+              },
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>

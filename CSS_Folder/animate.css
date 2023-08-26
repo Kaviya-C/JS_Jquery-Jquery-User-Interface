@@ -1,0 +1,11 @@
+#cube{
+ width: 100px;
+ height: 100px;
+ margin: 10px;
+ background-color: pink;
+ border: 3px solid red;
+ opacity: 0.3;
+ position:absolute;
+
+
+}

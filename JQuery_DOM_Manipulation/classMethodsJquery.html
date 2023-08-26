@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class meethods in jquery</title>
+    <link rel="stylesheet" href="../CSS_Folder/classmethods.css" />
+  </head>
+  <body>
+    <h2>dom manipulation class methods in jquery</h2>
+    <p>
+      addclass() is a method which will applyin some css styles to the selected
+      tags
+    </p>
+
+    <p>
+      removeClass() is a method which will remove the css style to the selected
+      tags
+    </p>
+
+    <p>
+      toggleclass() is a method which will do vice versa if it is style applied
+      then it removed if it is not applied then style will be applied
+    </p>
+
+    <p>css() this is used to set the css property for the selected html tags</p>
+
+    <br /><br />
+
+    <button id="btn1">Add Class</button>
+    <button id="btn2">Remove Class</button>
+    <button id="btn3">Toggle Class</button>
+    <button id="btn4">CSS</button>
+
+    <br /><br />
+    <div id="div1" class="division">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At optio
+        perferendis ullam sapiente quisquam architecto illum, a ad facere
+        libero?
+      </p>
+    </div>
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("#div1").addClass("firstdiv");
+        });
+      });
+      $(document).ready(function () {
+        $("#btn2").click(function () {
+          $("#div1").removeClass("firstdiv");
+        });
+      });
+      $(document).ready(function () {
+        $("#btn3").click(function () {
+          $("#div1").toggleClass("firstdiv");
+        });
+      });
+      $(document).ready(function () {
+        $("#btn4").click(function () {
+          $("#div1").css("background-color", "yellow");
+        });
+
+        $("#btn4").click(function () {
+          $("#div1").css("background-color");
+        });
+      });
+    </script>
+  </body>
+</html>

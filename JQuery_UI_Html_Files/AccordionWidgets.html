@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+    <link rel="stylesheet" href="../CSS_Folder/accordion.css" />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.structure.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.theme.css"
+    />
+  </head>
+  <body>
+    <h1>Accordion Widgets in jquery UI</h1>
+    <div id="panel">
+      <h2>Core Java</h2>
+      <p>
+        I am good in Core Java and also completed some frameworks.. and good in
+        OOPS concept .Very interesting part for me is Java-8 features there are
+        so many line of code can be reduced by this version.. Java is my first
+        best foremost favourite language
+      </p>
+
+      <h2>HTML</h2>
+      <p>
+        Yes after completing core java start with html and its an pretty awesome
+        web development language it describe the content of the webpage and we
+        can see the output as it is in browser thats really makes me motivated
+        to go with.. and completed successfully
+      </p>
+
+      <h2>CSS</h2>
+      <p>
+        Offcourse Yes structure of web page should be good then only people can
+        able to attract else they thought its just like a text so start css
+        learning all the necessary stuff to design the web page as much as
+        possible finally completed too
+      </p>
+
+      <h2>MYSQL</h2>
+      <p>
+        Some what need some rest so stop learning is not a good thing but
+        alternative learning is awesome thing so start with mysql and learn
+        about the databases completed with active minded
+      </p>
+
+      <h2>JavaScript</h2>
+      <p>
+        Content done design done if interactions is not there people wont love
+        the websites so start with javascript and its going now really
+        interesting part bcoz our websites itself how it works is understand me
+        clearly awesome part is to be jquery library and its user interface
+        there are so many built in methods are there to complete our task very
+        easily hope today august 26/2023 i am going to complete the js today
+        night ..
+      </p>
+    </div>
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+    <script src="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.js"></script>
+    <script>
+      // $("#panel").accordion();
+
+      $("#panel").accordion({
+        collapsible: true,
+        // event:"mouseover"
+        event: "click",
+        animate: 1000,
+        active: 3,
+        heightStyle: true,
+        icons: { header: "ui-icon-plus", activeHeader: "ui-icon-minus" },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,395 @@
+jQuery is a fast small and feature-rich javascript library
+
+open source and free to use
+write less do more
+most widely used js library
+purpose of jquery is to make it much easier to use javascript on our websites
+cross browser compatibility--- it supports modern browser too
+
+jquery takes a lot of common tasks that require many lines of javascript code to accomplish and wraps them into methods that u can call with single line of code
+
+jquery also simplifies lot of the complicated things fom javascript like ajax calls and dom manupulation
+
+jquery library contains the following features
+
+html/dom manipulation
+css manipulation
+html event methods
+effects and animations
+ajax
+utilities
+
+--------------------------------------
+
+how to download the jquery 
+
+jquery.com
+click right side download option
+it redirect into next page
+ther we can see many option as
+----> development uncompressed
+----> production uncompressed
+---slim file where ajax and effects are excluded
+
+
+-- click the uncompressed development bcoz we are in development
+
+
+-- production files are in less mb
+
+-- after clicking uncompressed development it redirect into another page which contains certain line of code right click then save as then locate that file in vs code where u want
+
+
+--- attach the js file into ur html file using script tag of src attributes
+
+
+---then write the jquery code it will work
+
+--------------------------------------
+HERE WE ARE DOWNLOADING MANUALLY THEN USED
+
+IF WE DONT WANT TO DOWNLOAD THEN USE CONTENT DELIVERY NETWORK WHICH MEAN WE PASTE SOME LINES OF CODE TO MAKE AVAILABLE THE JQUERY FOR OUR HTML FILE 
+
+-----------------------------------
+ANOTHER WAY OF LINKING THE JQUERY IN HTML DOCUMENT
+HERE NETWORK IS IMPORTANT TO RUN THE FILE
+
+
+THAT CERTAIN CODE CAN CONTAIN 
+SRC 
+INTEGRITY
+CROSSORIGIN
+
+CLICK SRC THEY REDIRECT INTO A PAGE WHICH CONTAINS SOME LINE OF CODE THAT IS NOTHING SAME AS MANUALLY DOWNLOADED CODED IS PRESENT IN THAT PAGE
+
+INTEGRITY MEANS SECURITY
+---------------------------------------
+CDN IS  PREFERRED    -- FOR JQUERY LIBRARYR
+
+--------------------------------------
+
+
+BASIC JQUERY SELECTORS
+
+ we can use selectors to perform some action
+
+  we can use $ symbol instead of using document.
+
+  after that $('HERE USE SELECTORS BASED ON TAGNAME OR CLASSNAME OR IDNAME').ACTION;
+
+  ITS SAME AS 
+  document.getElementById().innerHTML or some actions
+
+
+  the jquery selectors are: 
+
+  $('.classname').action
+  $('#idname').action
+  $('tagname').action
+
+
+  -------------------------------------
+
+  WHAT TYPE OF ACTION HAVE TO PERFORM AFTER SELECTING THE SELECTORS
+
+  fadeToggle -- this will take with arguments or without arguments
+``
+  fadeToggle() -- if the text is faded it will display 
+                if the text is visible it will hide
+
+COMPULSORY MENTION THAT FADETOGGLE IN PARENTHESIS
+
+ fadeToggle(200) -- 200 is an milliseconds
+                    there is certain delay to fade in and fade out
+
+
+-------------------------------------------------
+
+SELECTORS IN JQUERY
+
+ // ID SELECTOR
+  $('#firstdiv').fadeToggle();
+
+  //CLASS SELECTOR
+  $('.divsions').fadeToggle(2000);
+
+  //tag name selector
+  $('p').fadeToggle(100);
+
+  //hide the first paragraph
+  $('p:first').fadeToggle(100);
+
+  // hide the even elements
+  $('li:even').fadeToggle(200);
+
+  // hide the odd elements
+  $('li:odd').fadeToggle(100);
+
+
+WE CAN ALSO USE > SYMBOL TO CHOOSE CHILD ELEMENT 
+
+WHITE SPACE LIKE 
+div p{}
+this comes all the p tag in div tag to be selected
+
+div > p same as above 
+  -----------------------------------------
+  EVENTS IN JQUERY 
+
+
+// put every events inside the ready method
+$(document).ready(function(){
+
+ // here we mention the click event or mouse over event so many stuffs
+})
+
+// there is ready method is there which is used for developer
+
+// all the html document elements loading complete untill then no other event should be used by user
+// like onclick event mouse over event 
+// for this purpose we can use ready method to wait the events to complete the html elements loading
+
+//this is double click event
+$('#btn2').dblclick(fn2);
+function fn2(){
+ $('#div1').fadeToggle(1000);
+}
+
+// // this is like onclick event in javascript
+$('#btn1').click(fn1);
+function fn1(){
+ $('#div2').fadeToggle(200);
+}
+
+
+// mouse over event in jquery
+$('#btn3').mouseenter(fn3);
+function fn3(){
+$('#div3').fadeOut(1000);
+}
+
+//mouse left event in jquery
+$('#btn3').mouseleave(fn4);
+function fn4(){
+$('#div3').fadeIn(1000);
+}
+
+MOUSEENTER()   MOUSElEAVE()  -- COMPULSORY WRITE AS METHOD WITH PARENTHESIS
+
+HOVER CAN DO TWO PARAMETER ONE IS MOUSEENTER ANOTHER IS MOUSELEAVE
+
+
+
+$('BUTTON').HOVER(FUNC1,FUNC2);
+$('#btn').mouseenter(fn5);
+$('#btn').mouseleave(fn6);
+$('#btn').hover(fn5,fn6);
+function fn5(){
+$('#div3').fadeOut(1000);
+}
+function fn6(){
+$('#div3').fadeIn(1000);
+}
+
+
+
+
+
+IF WE WANT WE CAN MENTION THE MILLISECONDS
+
+CLICK() 
+DBLCLICK()
+READY()--- INSIDE ALL OTHER EVENT GIVE
+
+READY(FUNCTION(){here give all the events})
+
+ready method called with the help of document 
+$(document).ready(function(){})
+
+
+
+-----------------------------------------
+EFFECTS IN JQUERY
+
+hide() show() toggle()
+
+$(document).ready(function(){
+
+ $('#btn1').click(function(){
+  $('#div1').hide();
+ })
+
+ $('#btn2').click(function(){
+  $('#div1').show();
+ })
+
+ $('#btn3').click(function(){
+  $('#div1').toggle();
+ })
+
+-----
+
+ $(document).ready(function(){
+
+$('#btn1').click(function(){
+ $('#div1').fadeOut();
+})
+
+$('#btn2').click(function(){
+ $('#div1').fadeIn();
+})
+
+$('#btn3').click(function(){
+ $('#div1').fadeToggle();
+})
+
+SLIDEUP SLIDEDOWN BUTTON
+  $(document).ready(function()
+       {
+
+      $('#btn4').click(function(){
+       $('#div3').slideUp();
+      });
+
+      $('#btn4').click(function(){
+       $('#div3').slideDown();
+      });
+
+      $('#btn4').click(function(){
+       $('#div3').slideToggle();
+      })
+     });
+
+-----------------------------------
+CALLBACK AND CHAINING IN JQUERY
+
+ CALLBACK MEAN WHEN WE DO SOME ACTIVITY THAT ACTIVITY AFTER COMPPLETION ONLY IT GOES TO EXECUTE THE NEXT LINE 
+
+EG: FADETOGGLE(1000)--- AFTER THIS ONLY NEXT LINE ALERT BOX MESSAGE SHOULD COME
+BUT IT IS NOT WORK AS MY EXPECTATIONS BCOZ
+
+JQUERY IS LINE BY LINE EXECUTED 
+
+DUE TO THIS WE CAN USE CALLBACK IN EFFECTS
+
+TO WAIT THE NEXT LINE EXECUTION UNTILL CURRENT LINE COMPLETED
+
+$('#btn').click(1000)
+
+//function(){
+$('#div').slideToggle(1000,[callback to be defined in an anonymous funciton]
+function(){
+
+ alert('effect done successfully');
+})}
+EG:
+
+$(document).ready(function () {
+        function printMessage() {
+          alert("Effect done successfully");
+        }
+
+        $("#btn2").click(function () {
+          $("#div3").slideToggle(1000, printMessage);
+        });
+      });
+
+
+ EG:
+
+ $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("#div2").slideToggle(1000, function () {
+            alert("Div 2 is toggled");
+          });
+        });
+      });
+
+
+------------------------------------
+chaining mean multiple operation defined inside the one set of selector
+
+$(document).ready(function () {
+        $("#btn3").click(1000, function () {
+          $("#div3").slideUp(2000).slideDown(2000).fadeOut(1000).fadeIn(2000);
+        });
+      });
+
+-------------------------------------------
+
+DOM Manipulation method in jquery
+
+text() -- return the text which is present inside the html elements
+
+html()  == return the text along with inner html tag link italic bold tag too
+
+
+css()  === specified the css property it return the value of that property
+
+
+attr()    ==give the attribute name here it return the value of that specified attributes
+
+
+-------------------------------------
+
+if u want to set the attribute and css value mean 
+
+   $(document).ready(function () {
+
+
+       $("#btn7").click(function () {
+          $("#para2").css("color","Green");
+        });
+
+
+        $("#btn7").click(function () {
+          $("#para2").css("color");
+        });
+      });
+
+
+      this is how u can set the color of the text as we want using css()
+
+
+
+         $(document).ready(function () {
+       $("#btn6").click(function () {
+          $("#div2").attr("class","name");
+        });
+
+
+        $("#btn6").click(function () {
+          alert($("#div2").attr("class"));
+        });
+      });
+
+
+      this is how u can change the attribute value of the html element
+
+-----------------------------------
+
+some more methods in dom manipulation in jquery
+
+append() 
+prepend()
+after()
+before()
+
+remove()
+empty()
+-----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

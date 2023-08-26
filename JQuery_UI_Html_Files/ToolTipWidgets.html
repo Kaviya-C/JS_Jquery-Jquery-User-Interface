@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToolTipWidgets</title>
+    <link rel="stylesheet" href="../CSS_Folder/tooltip.css" />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.structure.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.theme.css"
+    />
+  </head>
+  <body>
+    <div id="div1" class="division">
+      <h2>Tooltip in jquery ui</h2>
+      <br /><img
+        src="../images/image7.jpg"
+        alt="not available"
+        width="150"
+        title=""
+        height="100"
+      />
+    </div>
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+    <script src="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.js"></script>
+
+    <script>
+      $("img").tooltip({
+        //track:true --- used to take up wherever we mouse over in picture
+        //explode
+        //blind
+        //highlight
+        // bounce ,
+        //pulsate,
+
+        content: "Cute_Baby eating Candy",
+        show: { effect: "bounce", duration: 3000 },
+        hide: { effect: "highlight", duration: 3000 },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Manipulation</title>
+    <link rel="stylesheet" href="../CSS_Folder/domMethods.css" />
+  </head>
+  <body>
+    <h2>Different methods for DOM Manipulation in Jquery</h2>
+    <p>
+      text() method to change the text or whatever the text as entered inside
+      html elements that will be able to get
+    </p>
+    <p>
+      html() this is the method which returns text along with html tags for
+      eg:<b
+        >if paragraph contains bold tag mean also it return that b tag as it is
+        but in text() method it wont
+      </b>
+    </p>
+    <p>
+      css() method to get the the css properties values by passing the css
+      property
+    </p>
+    <p>
+      attr() method used to get the specified value of the particular attributes
+      in the html elements
+    </p>
+    <div id="div1" value="This is attribute value" class="division">
+      <p id="para">
+        This is kaviya from TamilNadu Hope ur day become very beautiful...
+      </p>
+    </div>
+    <button id="btn">Click to see the text</button>
+
+    <div class="division" id="div2">
+      <p id="para2">
+        This is kaviya from TamilNadu Hope ur day become very beautiful...
+      </p>
+    </div>
+    <button id="btn2">Click to see the text is changed inside the box()</button>
+
+    <div class="division" id="div3">
+      <p id="para3">
+        This is kaviya from TamilNadu <i>Hope ur day</i> become very
+        <b>beautiful</b>...
+      </p>
+    </div>
+    <button id="btn3">Click to see text with html tag</button>
+
+    <div class="division" id="div3">
+      <p id="para4">
+        This is kaviya from TamilNadu <i>Hope ur day</i> become very
+        <b>beautiful</b>...
+      </p>
+    </div>
+    <button id="btn4">Click to see changed text with html tag</button>
+    <br /><br /><br />
+    <button id="btn5">click to see the attr value here</button>
+
+    <br /><br /><br />
+    <button id="btn6">click to attr value is set by user</button>
+
+    <br /><br /><br />
+    <button id="btn7">
+      click me to see the property value of para 2 text color
+    </button>
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+
+    <script>
+      // text()
+
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          var text = $("#para").text();
+          alert(text);
+        });
+      });
+
+      // override the given text
+      $(document).ready(function () {
+        $("#btn2").click(function () {
+          $("#para2").text(
+            "U r the best and u will reach ur goal very soon kaviya "
+          );
+        });
+      });
+
+      //html()
+      $(document).ready(function () {
+        $("#btn3").click(function () {
+          alert($("#para3").html());
+        });
+      });
+
+      //override the given html()
+      $(document).ready(function () {
+        $("#btn4").click(function () {
+          $("#para4").html("Trust me <b>U r the best</b> kaviya..");
+        });
+      });
+
+      //attr()
+      $(document).ready(function () {
+        $("#btn5").click(function () {
+          alert($("#div1").attr("value"));
+        });
+      });
+
+      //attr() class value we can get
+      // $(document).ready(function () {
+      //   $("#btn6").click(function () {
+      //     alert($("#div2").attr("class"));
+      //   });
+      // });
+
+      // change the attribute value of the specified attribute
+      $(document).ready(function () {
+       $("#btn6").click(function () {
+          $("#div2").attr("class","name");
+        });
+
+
+        $("#btn6").click(function () {
+          alert($("#div2").attr("class"));
+        });
+      });
+
+      //css() to get the css value for particular property
+      $(document).ready(function () {
+
+
+       $("#btn7").click(function () {
+          $("#para2").css("color","Green");
+        });
+
+
+        $("#btn7").click(function () {
+          $("#para2").css("color");
+        });
+      });
+    </script>
+  </body>
+</html>

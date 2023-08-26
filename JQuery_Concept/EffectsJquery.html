@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EffectsJQUERY</title>
+    <link rel="stylesheet" href="../CSS_Folder/events.css" />
+  </head>
+  <body>
+    <h2>Effects like hide show in jquery</h2>
+    <p>
+      hide method show method which is already predefined in jquery and also
+      toggle method there mean it do alternate things if selected tag is visible
+      mean it hide else show
+    </p>
+    <button id="btn1">Click To Hide</button>
+    <button id="btn2">Click To Show</button>
+    <button id="btn3">Toggle Button</button>
+    <button id="btn4">Slide Up Button</button>
+    <br />
+
+    <div id="div1" class="divisions">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, quod.
+        Sit, dolor a. Quibusdam facere quia soluta aspernatur tenetur omnis
+        dolorem quis ducimus maiores nostrum, provident, neque fugit cum, sint
+        culpa! Soluta odit quas architecto quidem nemo saepe animi blanditiis.
+      </p>
+    </div>
+
+    <div id="div2" class="divisions">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In architecto
+        iure voluptatibus culpa, cupiditate numquam ipsum reiciendis possimus
+        nostrum quia, libero voluptates distinctio nihil earum, consectetur
+        asperiores mollitia vel quibusdam.
+      </p>
+    </div>
+
+    <div id="div3" class="divisions">
+      <ul>
+        <li>List1</li>
+        <li>List2</li>
+        <li>List3</li>
+        <li>List4</li>
+        <li>List5</li>
+        <li>List6</li>
+        <li>List7</li>
+        <li>List8</li>
+        <li>List9</li>
+        <li>List10</li>
+      </ul>
+    </div>
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+    <script>
+
+      $(document).ready(function()
+      {
+
+       $('#btn1').click(function(){
+        $('#div1').hide();
+       });
+
+       $('#btn2').click(function(){
+        $('#div1').show();
+       });
+
+       $('#btn3').click(function(){
+        $('#div1').toggle();
+       })
+      });
+      //---------------------------------
+
+       $(document).ready(function()
+       {
+
+      $('#btn1').click(function(){
+       $('#div2').fadeOut();
+      });
+
+      $('#btn2').click(function(){
+       $('#div2').fadeIn();
+      });
+
+      $('#btn3').click(function(){
+       $('#div2').fadeToggle();
+      })
+     });
+
+     //-------------------------------
+     $(document).ready(function()
+       {
+
+      $('#btn4').click(function(){
+       $('#div3').slideUp();
+      });
+
+      $('#btn4').click(function(){
+       $('#div3').slideDown();
+      });
+
+      $('#btn4').click(function(){
+       $('#div3').slideToggle();
+      })
+     });
+    </script>
+  </body>
+</html>

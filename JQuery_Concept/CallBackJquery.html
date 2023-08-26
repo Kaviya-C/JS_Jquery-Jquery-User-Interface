@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CallBack Jquery</title>
+    <link rel="stylesheet" href="../CSS_Folder/callback.css" />
+  </head>
+  <body>
+    <h2>Callback and chaining in jquery</h2>
+    <button id="btn" type="button">Toggle</button>
+
+    <button id="btn1" type="button">Toggle</button>
+
+    <button id="btn2">CallBack</button>
+
+    <button id="btn3">Chaining</button>
+    <div id="div1" class="div">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat et,
+        optio minima ea explicabo corrupti hic, neque reiciendis nulla expedita
+        suscipit omnis, inventore asperiores repellat reprehenderit sit laborum
+        velit odio.
+      </p>
+    </div>
+
+    <div id="div2" class="div">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ea qui
+        consequatur consectetur perferendis fugit nobis aperiam autem itaque,
+        optio libero. Rem velit alias sed laboriosam facere reiciendis.
+        Molestiae!
+      </p>
+    </div>
+    <div id="div3" class="div">
+      <ul>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+        <li>item-5</li>
+        <li>item-6</li>
+        <li>item-7</li>
+        <li>item-8</li>
+        <li>item-9</li>
+        <li>item-10</li>
+      </ul>
+    </div>
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          $("#div1").toggle(1000, function () {
+            alert("Div 1 is toggled");
+          });
+        });
+      });
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("#div2").slideToggle(1000, function () {
+            alert("Div 2 is toggled");
+          });
+        });
+      });
+      $(document).ready(function () {
+        function printMessage() {
+          alert("Effect done successfully");
+        }
+
+        $("#btn2").click(function () {
+          $("#div3").slideToggle(1000, printMessage);
+        });
+      });
+      //chaining mean multiple operations performed
+
+      $(document).ready(function () {
+        $("#btn3").click(1000, function () {
+          $("#div3").slideUp(2000).slideDown(2000).fadeOut(1000).fadeIn(2000);
+        });
+      });
+    </script>
+  </body>
+</html>

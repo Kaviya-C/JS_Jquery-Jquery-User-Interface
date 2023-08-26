@@ -1,0 +1,58 @@
+jQuery   UI 
+
+it is a free and open source
+
+jquery ui is built on the top of jquery 
+
+jquery is the core library
+jquery ui is built on top of it
+
+
+jquery is the powerful javascript library built on top of jquery javascript library 
+
+ui stands for user interface
+
+it is a set of plugin for jquery that adds new functionalities to the jquery core library
+
+what it provide extra?
+interactions -- interactions -- draggable droppable resizable selectable sortable
+
+widgets  Accordion , AutoComplete ,button ,checkboxradio,  datepicker etc 
+
+
+more effects -- add class ,color animations , easing etc
+
+utilities
+
+
+menus and navigation bars 
+
+we get this in jqueryui.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

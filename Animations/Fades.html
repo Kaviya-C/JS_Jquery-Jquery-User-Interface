@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fades</title>
+  </head>
+  <body>
+    <button type="button" onclick="hiddenn()">Hide</button><br /><br />
+    <img
+      id="image1"
+      src="../images/green.jpeg"
+      alt="not available"
+      width="250px"
+    /><br /><br />
+    <button type="button" onclick="shows()">Show</button>
+
+    <script type="text/javascript">
+      var intervalId = 0;
+      var opacity = 0;
+
+      function hiddenn() {
+        intervalId = setInterval(hides, 20);
+      }
+      function hides() {
+        var image = document.getElementById("image1");
+
+        opacity = Number(
+          window.getComputedStyle(image).getPropertyValue("opacity")
+        );
+        if (opacity > 0) {
+          console.log(opacity);
+          opacity = opacity - 0.1;
+          image.style.opacity = opacity;
+        } else {
+          clearInterval(intervalId);
+        }
+      }
+      function shows() {
+        console.log("Hello");
+        intervalId = setInterval(display, 20);
+      }
+      function display() {
+        var image = document.getElementById("image1");
+        console.log("yes");
+
+        opacity = Number(
+          window.getComputedStyle(image).getPropertyValue("opacity")
+        );
+        console.log(opacity);
+        if (opacity < 1) {
+          console.log("No");
+          opacity = opacity + 0.1;
+          image.style.opacity = opacity;
+        } else {
+          clearInterval(intervalId);
+        }
+      }
+    </script>
+  </body>
+</html>

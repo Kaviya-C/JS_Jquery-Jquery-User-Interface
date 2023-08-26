@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoCompleteWidgets</title>
+    <link rel="stylesheet" href="../CSS_Folder/autocomplete.css" />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.structure.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.theme.css"
+    />
+  </head>
+  <body>
+    <h2>Autocomplete widgets in Jquery</h2>
+
+    <div id="div1" class="division">
+      <p>
+        <label>Enter Ur city Name: </label>
+        <input type="text" id="cityName" />
+      </p>
+    </div>
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+
+    <script src="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.js"></script>
+
+    <script>
+      var mycities = [
+        "Salem",
+        "Chennai",
+        "Trippur",
+        "Trichy",
+        "Vellore",
+        "Paris",
+        "Maharashtra",
+        "Bangalore",
+        "Madurai",
+        "Tirunelveli",
+        "Kanyakumari",
+        "Pune",
+        "Tiruvannamalai",
+      ];
+
+      $("#cityName").autocomplete(
+        {
+          source: mycities,
+        },
+        {
+          autoFocus: true,
+          delay: 300,
+          minLength: 2,
+        }
+      );
+    </script>
+  </body>
+</html>

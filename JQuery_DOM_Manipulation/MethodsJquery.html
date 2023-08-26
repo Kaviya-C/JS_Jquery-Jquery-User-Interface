@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DomManipulateJquery</title>
+    <link rel="stylesheet" href="../CSS_Folder/domMethods.css" />
+  </head>
+  <body>
+    <h2>Dom methods in jquery</h2>
+
+    <p>
+      append() -- this will append the text to the same html elements but at the
+      end
+    </p>
+
+    <p>
+      after() -- the text will be added after the html elements that mean if we
+      select div element to use after method then text is added after the div
+      element
+    </p>
+
+    <p>
+      before() -- this will add the text before the html elements and in
+      begining
+    </p>
+
+    <p>prepend() -- this will add the text begin of the same html elements</p>
+    <br /><br />
+    <button id="btn1">Append</button>
+    <button id="btn2">After</button>
+    <button id="btn3">Prepend</button>
+    <button id="btn4">Before</button>
+    <button id="btn5">Remove</button>
+    <button id="btn6">Empty</button>
+    <br />
+    <br />
+    <div id="div1" class="division">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo,
+        deleniti?
+      </p>
+    </div>
+
+    <div id="div2" class="division">
+     <p>
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo,
+       deleniti?
+     </p>
+   </div>
+    
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+    <script>
+     //append
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("#div1").append("<b>Hello this is kaviya</b>");
+        });
+      });
+      //after
+      $(document).ready(function () {
+        $("#btn2").click(function () {
+          $("#div1").after("<b>Hello this is kaviya</b>");
+        });
+      });
+      //prepend
+      $(document).ready(function () {
+        $("#btn3").click(function () {
+          $("#div1").prepend("<b>Hello this is kaviya</b>");
+        });
+      });
+      //before
+      $(document).ready(function () {
+        $("#btn4").click(function () {
+          $("#div1").before("<b>Hello this is kaviya</b>");
+        });
+      });
+      //remove
+      $(document).ready(function () {
+        $("#btn5").click(function () {
+          $("#div2").remove();
+        });
+      });
+      //empty
+      $(document).ready(function () {
+        $("#btn6").click(function () {
+          $("#div1").empty("<b>Hello this is kaviya</b>");
+        });
+      });
+    </script>
+  </body>
+</html>

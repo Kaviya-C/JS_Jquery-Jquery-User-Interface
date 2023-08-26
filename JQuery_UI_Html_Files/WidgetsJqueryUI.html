@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Widgets</title>
+    <link rel="stylesheet" href="../CSS_Folder/widgets.css" />
+    <link rel="stylesheet" href="../CSS_Folder/autocomplete.css" />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.structure.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.theme.css"
+    />
+  </head>
+  <body>
+    <h2>DatePicker</h2>
+    <div class="division">
+      <p>
+        <input type="text" id="dateInput" />
+      </p>
+    </div>
+    <br /><br /><br /><br />
+    <hr />
+    <button id="btn">Change</button>
+    <hr />
+    <h2>Accordion</h2>
+    <div id="div2" class="division">
+      <h2>Sample-1</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
+        obcaecati, deleniti non similique minus quam sed saepe, at libero soluta
+        repudiandae illum nostrum adipisci aliquam! Neque consequuntur
+        reiciendis ut incidunt?
+      </p>
+      <h2>Sample-1</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
+        obcaecati, deleniti non similique minus quam sed saepe, at libero soluta
+        repudiandae illum nostrum adipisci aliquam! Neque consequuntur
+        reiciendis ut incidunt?
+      </p>
+      <h2>Sample-1</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
+        obcaecati, deleniti non similique minus quam sed saepe, at libero soluta
+        repudiandae illum nostrum adipisci aliquam! Neque consequuntur
+        reiciendis ut incidunt?
+      </p>
+      <h2>Sample-1</h2>
+      <p>
+        Lorem ipsum dolor sit, amet conero soluta repudiandae illum nostrum
+        adipisci aliquam! Neque consequuntur reiciendis ut incidunt?
+      </p>
+      <h2>Sample-1</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
+        obcaecati, deleniti non similique minus quam sed saepe, at libero soluta
+        repudiandae illum nostrum adipisci aliquam! Neque consequuntur
+        reiciendis ut incidunt?
+      </p>
+    </div>
+    <br /><br /><br />
+    <hr />
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+
+    <script src="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.js"></script>
+
+    <script>
+      $("#dateInput").datepicker({
+        numberOfMonths: 1,
+        changeYear: true,
+        changeMonth: true,
+        showWeek: true,
+        weekHeader: "weeks",
+      });
+
+      $("#div2").accordion({
+        collapsible: true,
+        heightStyle: true,
+      });
+
+      $("#btn").click(function () {
+        //getter
+        var height = $("#dateInput").datepicker("option", "weekHeader");
+        alert(height);
+        $("#dateInput").datepicker("option", "numberOfMonths", 3);
+
+        
+        //setter
+        var changename = $("#dateInput").datepicker("option", "numberOfMonths");
+        alert(changename);
+      });
+    </script>
+  </body>
+</html>

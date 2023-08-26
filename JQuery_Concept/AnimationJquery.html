@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <link rel="stylesheet" href="..//CSS_Folder/animate.css" />
+  </head>
+  <body>
+    <br /><br /><br /><br /><br />
+    <button id="btn">Animation Button</button><br /><br />
+    <p id="cube"></p>
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          $("#cube").animate(
+            {
+              opacity: 1,
+              left: "150px",
+              width: "200px",
+              height: "200px",
+            },
+            1000);
+        });
+      });
+    </script>
+  </body>
+</html>

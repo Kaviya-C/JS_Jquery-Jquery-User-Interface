@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datepicker</title>
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.structure.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.theme.css"
+    />
+  </head>
+  <body>
+    <h2>Date Picker widgets in jquery</h2>
+    <div id="mydiv1"></div>
+    <br /><br /><br /><br /><br />
+    <div id="mydiv2">
+      <input type="text" placeholder="Enter the date" id="dateinput" />
+    </div>
+
+    <script src="../JavaScript_Library/jquery-3.7.0.js"></script>
+    <script src="../JQUERY_UI-1.13.2/jquery-ui-1.13.2/jquery-ui.js"></script>
+    <script>
+      $("#mydiv1").datepicker();
+
+      $("#dateinput").datepicker({
+        numberOfMonths: 1,
+        changeYear: true,
+        changeMonth: true,
+        showWeek: true,
+        weekHeader: "Weeks",
+        showOtherMonths: true,
+        minDate: new Date(2001, 1, 2),
+        maxDate: new Date(2024, 1, 2),
+      });
+    </script>
+  </body>
+</html>
